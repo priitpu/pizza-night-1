@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  height: 100dvh;
+  background: rgba(58, 61, 87, 1);
+  font-family: arial;
+}
+
+.ticket {
+  aspect-ratio: 9 / 16;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+  background-color: #fff;
+  cursor: pointer;
+  background-position: center center;
+  background-size: cover;
+}
+
+.ticket h1 {
+  color: #fff;
+  mix-blend-mode: screen;
+  filter: invert(1);
+  font-size: 60px;
+  z-index: 1;
+}
+.ticket__dot {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  transition: transform 0.1s ease;
+  transform: rotateZ(0deg);
+  mix-blend-mode: hard-light;
+}
+
+.ticket:hover img {
+  filter: grayscale(0);
+}
+
+.ticket:hover .ticket__dot {
+  transform: scale(17) rotateZ(30deg);
+}

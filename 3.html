@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="3.css" />
+  </head>
+  <body>
+    <div class="book">
+      <div class="book__page book__page--is-active"></div>
+      <div class="book__page">
+        <div class="page__content page__content--front">
+          <img src="page-1.png" />
+        </div>
+        <div class="page__content page__content--back"></div>
+      </div>
+      <div class="book__page">
+        <div class="page__content page__content--front">
+          <h1>Priit ja Pitsa</h1>
+          <h3><i>Tragikomöödia lastele</i></h3>
+        </div>
+        <div class="page__content page__content--back">
+          <img src="page-0.png" />
+        </div>
+      </div>
+      <div class="book__page">
+        <div class="page__content page__content--front">
+          <p>
+            <i
+              >Priit oli edukas front-end arendaja, kes armastas oma tööd, kuid
+              oli ka kirglik pitsa fänn.
+            </i>
+          </p>
+        </div>
+        <div class="page__content page__content--back">
+          <img src="page-2.png" />
+        </div>
+      </div>
+      <div class="book__page">
+        <div class="page__content page__content--front">
+          <p>
+            Ühel päeval otsustas ta tellida suure pitsa koju ja nautida seda
+            sõpradega õhtul.
+          </p>
+          <p>
+            Kuid kohale jõudnud pitsa oli kõike muud kui see, mida ta ootas.
+            Tainas oli kõva ja katteks oli pandud kõige imelikumad koostisosad,
+            mida ta oli kunagi näinud. Nii pettununa otsustas Priit uurida,
+            kuidas pitsat valmistatakse ja kuidas ta ise selle valmistamist
+            õppida saaks.
+          </p>
+        </div>
+        <div class="page__content page__content--back">
+          <img src="page-3.png" />
+        </div>
+      </div>
+      <div class="book__page">
+        <div class="page__content page__content--front">
+          <p>
+            Ta hakkas uurima erinevaid retsepte, katsus erinevaid taignaid ning
+            katteid ning lõpuks õnnestus tal valmistada täiuslik pitsa - maitsev
+            tainas ja kõik tema lemmikkatte koostisosad.
+          </p>
+          <p>
+            Priit jagas oma uut oskust ka oma sõpradega ning koos hakkasid nad
+            katsetama erinevaid retsepte ja maitseid. Nende õhtud muutusid
+            veelgi lõbusamaks ja maitsvamaks tänu Priidu uuele hobile.
+          </p>
+        </div>
+        <div class="page__content page__content--back">
+          <img src="onnelik.jpeg" alt="" />
+        </div>
+      </div>
+      <div class="book__page book__page--last">
+        <div class="page__content page__content--front">
+          <p>
+            Lõpuks otsustas Priit oma oskusi ka tööga ühendada ja lisada oma
+            veebilehele pitsa tellimise võimaluse. Nii sai ta oma armastuse
+            pitsa vastu tööga ühendada ning muuta ka teiste inimeste
+            pitsanautimise kogemust paremaks.
+          </p>
+        </div>
+        <div class="page__content page__content--back"></div>
+      </div>
+    </div>
+  </body>
+  <script>
+    document.addEventListener("click", (e) => {
+      const closestPageElement = e.target.closest(".book__page");
+      if (
+        Array.from(closestPageElement.classList).includes("book__page--last")
+      ) {
+        return;
+      }
+      if (
+        !Array.from(closestPageElement.classList).includes(
+          "book__page--is-active"
+        )
+      ) {
+        closestPageElement.classList.add("book__page--is-active");
+      } else {
+        closestPageElement.classList.remove("book__page--is-active");
+      }
+    });
+  </script>
+</html>

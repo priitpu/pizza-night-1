@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  height: 100dvh;
+  background: rgba(58, 61, 87, 1);
+  font-family: arial;
+  color: #fff;
+}
+
+.content {
+  max-width: 900px;
+}
+
+h4 {
+  font-size: 60px;
+  margin-bottom: 32px;
+  background-position: 33% 50px;
+  display: inline-block;
+  background-size: 0% 100%;
+  background-image: linear-gradient(rgb(20, 204, 118), rgb(20, 204, 118));
+  transition: all 0.5s ease;
+  background-repeat: no-repeat;
+}
+
+span {
+  background-position: 100% 0%;
+  background-size: 100% 0%;
+  background-image: linear-gradient(90deg, #ff57a2, #ff57a2);
+  transition: all 0.5s ease;
+  background-repeat: no-repeat;
+  transition-delay: 0.25s;
+}
+
+h4:hover,
+h4:hover span {
+  background-size: 100% 100%;
+}
+
+p {
+  display: inline;
+  font-size: 36px;
+  line-height: 1.5;
+}
+
+p.line {
+  background-position: 0% 36px;
+  background-size: 0% 100%;
+  background-image: linear-gradient(rgb(20, 204, 118), rgb(20, 204, 118));
+  transition: all 0.5s ease;
+  background-repeat: no-repeat;
+}
+
+p.line:hover {
+  background-size: 100% 100%;
+}
+
+p.solid {
+  background-position: 0% 0%;
+  background-size: 0% 100%;
+  background-image: linear-gradient(rgb(20, 204, 118), rgb(20, 204, 118));
+  transition: all 0.5s ease;
+  background-repeat: no-repeat;
+  box-decoration-break: clone;
+}
+
+p.solid:hover {
+  background-size: 100% 100%;
+}
+
+p.solid-reverse {
+  background-position: 100% 0%;
+  background-size: 0% 100%;
+  background-image: linear-gradient(rgb(20, 204, 118), rgb(20, 204, 118));
+  transition: all 0.5s ease;
+  background-repeat: no-repeat;
+  box-decoration-break: clone;
+}
+
+p.solid-reverse:hover {
+  background-size: 100% 100%;
+}
+
+p.hypnotoad {
+  background-image: linear-gradient(
+    to left,
+    #ffae0a,
+    #ff57a2,
+    #41e592,
+    #ffae0a,
+    #ff57a2
+  );
+  background-size: 300%;
+  box-decoration-break: clone;
+  color: transparent;
+  background-clip: text;
+  animation-name: slide;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  background-repeat: no-repeat;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+p.hypnotoad::selection {
+  color: white;
+}
+
+@keyframes slide {
+  0% {
+    background-position-x: 0%;
+  }
+  100% {
+    background-position-x: 100%;
+  }
+}
